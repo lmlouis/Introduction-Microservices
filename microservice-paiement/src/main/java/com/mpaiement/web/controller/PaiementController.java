@@ -31,7 +31,7 @@ public class PaiementController {
 
 
 
-        //TODO Nous allons appeler le Microservice Commandes ici pour lui signifier que le paiement est accepté
+        // Nous allons appeler le Microservice Commandes ici pour lui signifier que le paiement est accepté
 
         return new ResponseEntity<Paiement>(nouveauPaiement, HttpStatus.CREATED);
 

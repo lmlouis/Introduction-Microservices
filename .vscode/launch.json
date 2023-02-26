@@ -1,0 +1,34 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-McommandesApplication<mcommandes>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.mcommandes.McommandesApplication",
+            "projectName": "mcommandes",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MpaiementApplication<mpaiement>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.mpaiement.MpaiementApplication",
+            "projectName": "mpaiement",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MproduitsApplication<mproduits>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.mproduits.MproduitsApplication",
+            "projectName": "mproduits",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
