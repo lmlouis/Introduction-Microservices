@@ -1,5 +1,8 @@
 # Introduction aux Microservices
 
+![](/images/architecture-projet.jpg)
+
+## Mcommerce
 L'application mcommerce qui est composée de 3 microservices :
 '
 * Microservice-produits : ce microservice gère le produit. Il propose 2 opérations simples : lister tous les produits, et récupérer un produit par son ID.
@@ -25,7 +28,7 @@ Fonctionnalités :
 * Microservice-paiements : http://localhost:9003
     * POST : "/paiement" ``ResponseEntity<Paiement>  payerUneCommande(@RequestBody Paiement paiement)``
 
-## Créez un client
+## Client-ui
 
 Pour créer une interface graphique, nous allons utiliser Thymeleaf comme moteur de template.
 Créer un projet sur Spring Initializr, nommé client-ui:
@@ -51,4 +54,3 @@ Fonctionalité :
     * GET :"/" retourne la page HTML du nom de Accueil.html
 
 
-![](/images/architecture-projet.jpg)
