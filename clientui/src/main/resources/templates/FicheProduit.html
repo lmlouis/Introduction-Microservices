@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Mcommerce</title>
+
+  <link rel="stylesheet" type="text/css"
+      href="http://localhost:8080/webjars/bootstrap/4.0.0-2/css/bootstrap.min.css"/>
+</head>
+<body>
+<div class="container">
+  <h1 class="text-center">Application Mcommerce</h1>
+  <section class="py-5 col-md-6 mx-auto mt-5">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            <div class="col mb-5">
+                <div class="card">
+                    <img th:src="${produit.image}" th:alt="${produit.titre}" class="img card-img-top"  width="450" height="300"/>
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <h5 th:text="${produit.titre}" class="fw-bolder"></h5>
+                            <strong class="badge badge-warning"><span th:text= "${produit.prix}"></span>$</strong>
+                            <p th:text="${produit.description}"></p>
+                        </div>
+                    </div>
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <p class="text-center">
+                            <a th:href="@{|/commander-produit/${produit.id}/${produit.prix}||}" class="btn btn-outline-dark mt-auto" href="">COMMANDER</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+<script type="text/javascript" src="http://localhost:8080/webjars/bootstrap/4.0.0-2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
+
+

@@ -6,9 +6,35 @@
 </head>
 
 <body>
-<div class="container">
-   <h1>Application Mcommerce</h1>
-</div>
+   <div class="container">
+
+
+
+      <h1>Application Mcommerce</h1>
+      <section class="px-4 px-lg-5 mt-5">
+         <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            <div class="col-3 mb-5" th:each="produit : ${produits}" >
+               <div class="card h-100">
+                  <div>
+                        <img th:src="${produit.image}"  class="card-img-top" width="450" height="250"/>
+                        <div class="card-body p-4">
+                           <div class="text-center">
+                               <h5 th:text= "${produit.titre}" class="fw-bolder"></h5>
+                               <strong class="badge badge-warning"><span th:text= "${produit.prix}"></span>$</strong>
+                           </div>
+                       </div>
+                       <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                           <p class="text-center">
+                               <a th:href="@{|/details-produit/${produit.id}|}" class="btn btn-outline-dark mt-auto" href="">Consulter</a>
+                           </p>
+                       </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+    </div>
 <script type="text/javascript" src="webjars/bootstrap/4.0.0-2/js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -2,10 +2,11 @@ package dev.lmlouis.clientui;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.feign.EnableFeignClients;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
-@EnableFeignClients("dev.lmlouis.clientui")
+
 @SpringBootApplication
+@EnableFeignClients("dev.lmlouis.clientui")
 public class ClientuiApplication {
 
 	public static void main(String[] args) {

@@ -54,3 +54,15 @@ Fonctionalité :
     * GET :"/" retourne la page HTML du nom de Accueil.html
 
 
+### Étape 1 : Récupérez la liste des produits
+    * ProductBean
+    * MicroserviceProduitsProxy : @FeignClient
+Quand Feign fera appel à Microservice-produits  afin de récupérer la liste des produits, il lui faudra stocker chaque produit dans un objet de type   Product  afin que nous puissions les manipuler facilement plus tard
+
+Nous allons maintenant créer une interface qui va ``regrouper les requêtes que nous souhaitons passer au Microservice-produits``. Cette interface est ce que nous appelons un ``proxy``, car elle se positionne comme une classe intermédiaire qui fait le lien avec les microservices extérieurs à appeler.
+
+``@FeignClient``  déclare cette interface comme client Feign. Feign utilisera les informations fournies ici pour construire les requêtes HTTP appropriées afin d'appeler le Microservice-Produits.
+
+On donne à cette annotation 2 paramètres : le premier est "name", il s'agit du nom du microservice à appeler. Il ne s'agit pas ici de n'importe quel nom, mais du nom "officiel" qui sera utilisé plus tard par des Edge Microservices comme Eureka et Ribbon.
+
+Celui-ci est à renseigner dans application.properties du microservice à appeler grâce à ``spring.application.name``.Le deuxième paramètre est l'URL du microservice (localhost:9001)
