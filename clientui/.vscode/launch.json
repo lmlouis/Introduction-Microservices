@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-ClientuiApplication<clientui>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "dev.lmlouis.clientui.ClientuiApplication",
+            "projectName": "clientui",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
